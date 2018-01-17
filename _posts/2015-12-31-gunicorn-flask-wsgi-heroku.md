@@ -3,7 +3,7 @@ title: Heroku, gunicorn and flask wsgi app.
 updated: 2015-12-31 
 ---
 
-A walk through and summarization of 
+A walk through of 
 [Heroku's getting started guide](https://devcenter.heroku.com/articles/getting-started-with-python-o) 
 to host a flask application on Heroku.
 
