@@ -5,6 +5,14 @@ title: About
 
 Hello.
 
-This will be your About page. Anything about you, it should be written here in details. You may describe your bio here like who you are, what you do, your intention, social site hyperlinks and how people can contact you, etc.
+I am **Nguyen Nguyen**, or just **Wen** for short. I am a **Software Engineer**
+working at [HERE Tech](https://www.linkedin.com/company/3237134/) in Chicago.
+When I'm not coding or tinkering with software, I brush up my Japanese.
 
-**Less is more..**
+You can find more about me professionally 
+on [Linkedin](https://www.linkedin.com/in/nguyensquared/). 
+Or maybe find something interesting 
+on my [Github](https://github.com/wenn).
+
+
+
