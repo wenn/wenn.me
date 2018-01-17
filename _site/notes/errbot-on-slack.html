@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+	<title>Errbot on Slack · Nguyen Nguyen</title>
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:title" content="Errbot on Slack" />
+<meta name="twitter:description" content="Chat ClientsSlack is a great chat client. It’s incomparably better than Skype, Lync, Spark and Hangoutsfor collaborative teams and developers. Hipchat is a contender but lacks many great features t...">
+
+<meta name="description" content="Chat ClientsSlack is a great chat client. It’s incomparably better than Skype, Lync, Spark and Hangoutsfor collaborative teams and developers. Hipchat is a c...">
+
+
+	<meta name="google-site-verification" content="epFgX0s_0RM3CdjwFcsewfXzPov2g8s9ZBOLyaIUH-o">
+
+
+<link rel="icon" href="http://0.0.0.0:4000/assets/favicon.png">
+<link rel="apple-touch-icon" href="http://0.0.0.0:4000/assets/touch-icon.png">
+<link rel="stylesheet" href="http://0.0.0.0:4000/assets/core.css">
+<link rel="canonical" href="http://0.0.0.0:4000/notes/errbot-on-slack">
+<link rel="alternate" type="application/atom+xml" title="Nguyen Nguyen" href="http://0.0.0.0:4000/feed.xml" />
+
+
+
+
+
+	</head>
+
+	<body>
+
+		<aside class="logo">
+
+	
+
+	<a href="/">
+		<img src="http://www.gravatar.com/avatar/20929ff4cccf542a7756932f8ae9baa8.png?s=80" class="gravatar">
+	</a>
+	<span class="logo-prompt">Back to Home</span>
+
+</aside>
+
+
+		<main>
+			<article>
+
+	<div class="center">
+		<h1>Errbot on Slack</h1>
+		<time>February 2, 2016</time>
+	</div>
+
+	<div class="divider"></div>
+
+	<h3 id="chat-clients">Chat Clients</h3>
+<p><strong>Slack</strong> is a great chat client. 
+It’s incomparably better than <strong>Skype</strong>, <strong>Lync</strong>, <strong>Spark</strong> and <strong>Hangouts</strong>
+for collaborative teams and developers. 
+<strong><a href="https://www.hipchat.com">Hipchat</a></strong> is a contender 
+but lacks many great features that 
+Slack offers out of the box: saving a conversation context, 
+up arrow editing ( like Skype’s ), better code snippets, 
+completions for IRC-like commands,
+ <a href="http://slackhq.com/post/130081834025/refreshing-posts-20">chat posts</a>, 
+ pinning messages and files to a chat, etc..</p>
+
+<p>There’s also <strong><a href="https://demo.rocket.chat/home">Rocket.Chat</a></strong>
+which seems similar to Slack’s features on the surface, 
+but I have not had the commitment to try it out; it’s also open source.</p>
+
+<p>Lets do more cool things with Slack; 
+adding a bot and get into <strong><a href="https://www.pagerduty.com/what-is-chatops">Chatops</a></strong>.</p>
+
+<h3 id="bots">Bots</h3>
+<p>There are a lot of bots out there for different languages, 
+but preferring python, <strong><a href="http://errbot.io/">Errbot</a></strong> was the choice for me.
+Errobot integrates with all sorts of things, 
+and amazingly simple to integrate with Slack. 
+Errbot’s <a href="http://errbot.io/user_guide/plugin_development/basics.html">Hello world!</a> guide is pretty 
+useful if you want to use it as a reference.</p>
+
+<h3 id="setting-up-errbot">Setting up Errbot</h3>
+<p>With all python project, set up a <strong><a href="https://virtualenv.readthedocs.org/en/latest/">virtualenv</a></strong> and install these dependencies:</p>
+
+<p><code class="highlighter-rouge">pip install slackclient errbot</code></p>
+
+<h3 id="organizing-the-project">Organizing the project</h3>
+<p>Create a directory structure like so…</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/wally
+/wally/plugins
+/wally/plugins/goodbye/goodbye.plug
+/wally/plugins/goodbye/goodbye.py
+/wally/config.py
+/wally/data
+/wally/logs
+</code></pre></div></div>
+
+<p>It’s a bit of work, but I promise the Slack part will be a breeze. 
+Now lets see what they folders do.</p>
+
+<ul>
+  <li><strong>/wally</strong> - this is our bot’s top dir obviously..</li>
+  <li><strong>/wally/plugins</strong> - a folder for plugins, each plugin extension should have it’s own subfolder.</li>
+  <li><strong>/wally/plugins/goodbye/goodbye.plug</strong> - the plugin’s meta</li>
+  <li><strong>/wally/plugins/goodbye/goodbye.py</strong> - the plugin’s code</li>
+  <li><strong>/wally/config.py</strong> - configurations for Errbot</li>
+  <li><strong>/wally/data</strong> - local data store files that Errbot uses</li>
+  <li><strong>/wally/logs</strong> - where the logs that Errbot generates will go</li>
+</ul>
+
+<h3 id="goodbyeplug--stolen-and-modified-">goodbye.plug ( stolen and modified )</h3>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[Core]</span>
+<span class="py">Name</span> <span class="p">=</span> <span class="s">GoodbyeEva</span>
+<span class="py">Module</span> <span class="p">=</span> <span class="s">goodbye</span>
+
+<span class="nn">[Python]</span>
+<span class="py">Version</span> <span class="p">=</span> <span class="s">2+</span>
+
+<span class="nn">[Documentation]</span>
+<span class="py">Description</span> <span class="p">=</span> <span class="s">Wally saying goodbye to Eva..</span>
+</code></pre></div></div>
+
+<h3 id="goodbyepy--stolen-and-modified-">goodbye.py ( stolen and modified )</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">errbot</span> <span class="kn">import</span> <span class="n">BotPlugin</span><span class="p">,</span> <span class="n">botcmd</span>
+<span class="k">class</span> <span class="nc">GoodbyeEva</span><span class="p">(</span><span class="n">BotPlugin</span><span class="p">):</span>
+    <span class="s">"""A farewell to Eva plugin"""</span>
+
+    <span class="nd">@botcmd</span>
+    <span class="k">def</span> <span class="nf">goodbye</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+        <span class="s">"""Say goodbye to this Eva.."""</span>
+        <span class="k">return</span> <span class="s">'Goodbye, Eva....'</span>
+</code></pre></div></div>
+
+<h3 id="configpy">config.py</h3>
+<p>A template of config.py 
+can be found here <em><a href="https://github.com/errbotio/errbot/blob/master/errbot/config-template.py">config-template.py</a></em>. 
+Copy the contents over.</p>
+
+<p>Update these properties in the config, 
+the notes in there are great 
+if you’re interested in the details, 
+but the property’s names are self-explained.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BOT_DATA_DIR = './data'
+BOT_EXTRA_PLUGIN_DIR = './plugins'
+BOT_LOG_FILE = './logs/log.txt'
+BOT_LOG_LEVEL = logging.DEBUG # This will be more useful than the default
+BOT_IDENTITY = {} # Comment out the defaults
+</code></pre></div></div>
+
+<h3 id="a-test-run">A Test Run</h3>
+<p>That should be it! <code class="highlighter-rouge">errbot</code> should be available as a binary, 
+to run it in locally in a chat emulator..</p>
+
+<p><code class="highlighter-rouge">errbot --text</code></p>
+
+<p>Hopefully this should work smoothly 
+and should put you in a chat prompt 
+where you can run <code class="highlighter-rouge">!help</code>. 
+You should see a help for <strong>GoodbyeEva</strong> plugin, 
+if not go through the logs in the console for warnings and errors; 
+unfortunately plugin failures are silent.</p>
+
+<h3 id="the-slack-part">The Slack part</h3>
+<p>Finally we are here, thanks for sticking around! 
+The easiest way to integrate with Slack is to create a <strong>bot user</strong> 
+for your team. 
+Head over to <a href="https://api.slack.com/bot-users">Slack’s bot user</a> to create a new bot user. 
+Once you’re done with that, you’ll be on the new bot user’s page. 
+Here all we will need is the <em>API Token</em> under <strong>Integration Settings &gt; API Token</strong>, 
+should look something like this <strong>xoxb-1234567890-supersecretpseudorandomstring</strong>.</p>
+
+<p>Alright we got the token we need, 
+now back to <strong>config.py</strong> and its <strong>BOT_IDENTITY</strong> property. 
+Uncomment the token key under “Slack mode” and add your token here. 
+That. is. it. To start it up simple run <code class="highlighter-rouge">errbot</code> or <code class="highlighter-rouge">errbot --slack</code></p>
+
+<p>There’s one more thing we need to do, 
+add the user bot to a room 
+and then you can start interacting with WallyBot, just type <code class="highlighter-rouge">!help</code>.</p>
+
+
+
+</article>
+
+<div class="page-navigation">
+	
+		<a class="home" href="http://0.0.0.0:4000" title="Back to Homepage">Home</a>
+  
+		<span> &middot; </span>
+    <a class="prev" href="http://0.0.0.0:4000/notes/gunicorn-flask-wsgi-heroku" title="PREV: Heroku, gunicorn and flask wsgi app.">&gt;&gt;</a>
+  
+</div>
+
+		</main>
+
+		<div class="footer">
+  <span class="block">&lt;/&gt; <a href="http://github.com/heiswayi/the-plain" title="a minimalist Jekyll theme for personal blog">The Plain theme</a> by <a href="http://heiswayi.github.io">Heiswayi Nrird</a>.</span>
+  <!--<span class="block">&copy; 2018 Nguyen Nguyen</span>-->
+</div>
+
+
+	</body>
+
+</html>
