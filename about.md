@@ -7,7 +7,10 @@ Hello.
 
 I am **Nguyen Nguyen**, or "Wen" for short. I am a **Software Engineer**
 working at [HERE Tech](https://www.linkedin.com/company/3237134/) in Chicago.
-When I'm not coding or tinkering with software, I brush up onmy Japanese.
+I write clean code for web applications, web services and distributed systems.
+I build, package, deploy and monitor software on the cloud. 
+When I'm not coding or tinkering with software, I brush up on my Japanese. I'm
+also fluent in Vietnamese.
 
 You can find more about me professionally 
 on [Linkedin](https://www.linkedin.com/in/nguyensquared/). 
