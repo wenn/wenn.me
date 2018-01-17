@@ -5,9 +5,9 @@ title: About
 
 Hello.
 
-I am **Nguyen Nguyen**, or just **Wen** for short. I am a **Software Engineer**
+I am **Nguyen Nguyen**, or "Wen" for short. I am a **Software Engineer**
 working at [HERE Tech](https://www.linkedin.com/company/3237134/) in Chicago.
-When I'm not coding or tinkering with software, I brush up my Japanese.
+When I'm not coding or tinkering with software, I brush up onmy Japanese.
 
 You can find more about me professionally 
 on [Linkedin](https://www.linkedin.com/in/nguyensquared/). 
