@@ -13,7 +13,7 @@ github_username:    wenn # Your GitHub username here
 
 # Site Settings
 url:                "https://wenn.github.io/" # mail url: example https://heiswayi.nrird.com
-baseurl:            "wenn.me" # for gh-pages
+baseurl:            "" # for gh-pages
 permalink:          /notes/:title # Post permalink
 timezone:           America/Chicago
 
