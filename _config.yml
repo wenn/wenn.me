@@ -12,7 +12,7 @@ twitter_username:   "" # Your Twitter username here
 github_username:    wenn # Your GitHub username here
 
 # Site Settings
-url:                "wenn.me" # mail url: example https://heiswayi.nrird.com
+url:                "http://wenn.me" # mail url: example https://heiswayi.nrird.com
 baseurl:            "" # for gh-pages
 permalink:          /notes/:title # Post permalink
 timezone:           America/Chicago
