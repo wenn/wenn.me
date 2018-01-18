@@ -147,7 +147,7 @@ and then you can start interacting with WallyBot, just type &lt;code class=&quot
       
         <item>
           <title>Heroku, gunicorn and flask wsgi app.</title>
-          <description>&lt;p&gt;A walk through and summarization of 
+          <description>&lt;p&gt;A walk through of 
 &lt;a href=&quot;https://devcenter.heroku.com/articles/getting-started-with-python-o&quot;&gt;Heroku’s getting started guide&lt;/a&gt; 
 to host a flask application on Heroku.&lt;/p&gt;
 
