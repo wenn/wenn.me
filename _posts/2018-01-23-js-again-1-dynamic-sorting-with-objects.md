@@ -27,7 +27,7 @@ let births = [
 ### Sorting fn
 ```javascript
 function by(key) {
-  return (a, b) => (a[cleanKey] <= b[cleanKey] ? 1 : -1);
+  return (a, b) => (a[key] <= b[key] ? 1 : -1);
 }
 ```
 
