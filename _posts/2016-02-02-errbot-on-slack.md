@@ -1,5 +1,5 @@
 ---
-title: Errbot on Slack
+title: Errbot on Slack.
 updated: 2016-02-02
 ---
 

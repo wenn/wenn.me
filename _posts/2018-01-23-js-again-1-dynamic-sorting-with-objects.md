@@ -1,5 +1,5 @@
 ---
-title: JS again - 1, dynamic sorting with objects
+title: JS again - 1, dynamic sorting with objects.
 updated: 2018-01-23
 ---
 

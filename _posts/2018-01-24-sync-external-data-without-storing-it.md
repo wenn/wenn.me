@@ -69,7 +69,7 @@ def get_data(vendor_transaction):
 
   if (data is None):
     all_data = add_more_data(vendor_transaction, my_data)
-    write_to_datastore(_hash)
+    write_to_datastore(_hash, all_data)
   
   return (_hash, all_data)
 ```
