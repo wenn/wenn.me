@@ -30,8 +30,6 @@ or
 ### [git hooks with python scripts](py-git-hooks)
 Old project, needs work. Manage and organize git hooks as python scripts in your project. 
 
----
-
 [penny]: https://github.com/wenn/penny
 [py-git-hooks]: https://github.com/wenn/py-git-hooks
 [aws-emr-alert]: https://github.com/wenn/aws-emr-alert
