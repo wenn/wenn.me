@@ -3,7 +3,7 @@ title: Errbot on Slack.
 updated: 2016-02-02
 ---
 
-### Chat Clients
+# Chat Clients
 **Slack** is a great chat client. 
 It's incomparably better than **Skype**, **Lync**, **Spark** and **Hangouts**
 for collaborative teams and developers. 
@@ -22,7 +22,7 @@ but I have not had the commitment to try it out; it's also open source.
 Lets do more cool things with Slack; 
 adding a bot and get into **[Chatops](https://www.pagerduty.com/what-is-chatops)**.
 
-### Bots
+# Bots
 There are a lot of bots out there for different languages, 
 but preferring python, **[Errbot](http://errbot.io/)** was the choice for me.
 Errobot integrates with all sorts of things, 
@@ -30,13 +30,13 @@ and amazingly simple to integrate with Slack.
 Errbot's [Hello world!](http://errbot.io/user_guide/plugin_development/basics.html) guide is pretty 
 useful if you want to use it as a reference. 
 
-### Setting up Errbot
+# Setting up Errbot
 With all python project, set up a **[virtualenv](https://virtualenv.readthedocs.org/en/latest/)** and install these dependencies:
 
 `pip install slackclient errbot`
 
 
-### Organizing the project
+# Organizing the project
 Create a directory structure like so...
 
 ```
@@ -60,7 +60,7 @@ Now lets see what they folders do.
 - **/wally/data** - local data store files that Errbot uses
 - **/wally/logs** - where the logs that Errbot generates will go
 
-### goodbye.plug ( stolen and modified )
+# goodbye.plug ( stolen and modified )
 
 ```ini 
 [Core]
@@ -74,7 +74,7 @@ Version = 2+
 Description = Wally saying goodbye to Eva..
 ```
 
-### goodbye.py ( stolen and modified )
+# goodbye.py ( stolen and modified )
 ```python
 from errbot import BotPlugin, botcmd
 class GoodbyeEva(BotPlugin):
@@ -86,7 +86,7 @@ class GoodbyeEva(BotPlugin):
         return 'Goodbye, Eva....'
 ```
 
-### config.py
+# config.py
 A template of config.py 
 can be found here *[config-template.py](https://github.com/errbotio/errbot/blob/master/errbot/config-template.py)*. 
 Copy the contents over.
@@ -104,7 +104,7 @@ BOT_LOG_LEVEL = logging.DEBUG # This will be more useful than the default
 BOT_IDENTITY = {} # Comment out the defaults
 ```
 
-### A Test Run
+# A Test Run
 That should be it! `errbot` should be available as a binary, 
 to run it in locally in a chat emulator..
 
@@ -117,7 +117,7 @@ You should see a help for __GoodbyeEva__ plugin,
 if not go through the logs in the console for warnings and errors; 
 unfortunately plugin failures are silent.
 
-### The Slack part
+# The Slack part
 Finally we are here, thanks for sticking around! 
 The easiest way to integrate with Slack is to create a **bot user** 
 for your team. 

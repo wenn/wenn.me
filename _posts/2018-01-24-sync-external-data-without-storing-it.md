@@ -3,7 +3,7 @@ title: Syncing external data without storing it.
 updated: 2018-01-24
 ---
 
-## I would like to
+# I would like to
 I'm retrieving financial data from a bank on a user's behalf,
 and layering my own data on top of the bank data. Storing the bank's 
 data might conflict with the bank's policy or the willingness of the user.
@@ -46,7 +46,7 @@ transactions:
     category = splurge
 ```
 
-## A way
+# A way
 
 Between the call to the vendor and persisting to a datastore,
 we need to link the vendor's data with our data. A way to

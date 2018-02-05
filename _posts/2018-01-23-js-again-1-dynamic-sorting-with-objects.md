@@ -6,9 +6,11 @@ updated: 2018-01-23
 Relearning **Javascript** part one. 
 How to sort a list of objects dynamically?
 
-### Some data
+*Edit*: In [JS again - 2](/notes/js-again-2-improve-dynamic-sorting-with-objects), we've improved on the sorting.
+
+# Some data
 ```javascript
-let births = [
+const births = [
   {
     name: "Paul Rudd",
     birth: new Date("1969/04/06")
@@ -24,7 +26,7 @@ let births = [
 ]
 ```
 
-### Sorting fn
+# Sorting fn
 ```javascript
 function by(key) {
   return (a, b) => (a[key] >= b[key] ? 1 : -1);
@@ -49,11 +51,11 @@ function by(key) {
 ]
 ```
 
-### Adding descending/ascending
+# Adding descending/ascending
 ```javascript
 function by(key) {
-  let isDesc = /^-/.test(key)
-  let cleanKey = key.replace(/^[-+]/, "")
+  const isDesc = /^-/.test(key);
+  const cleanKey = key.replace(/^[-+]/, "")
 
   return (a, b) =>
     isDesc
