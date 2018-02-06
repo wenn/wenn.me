@@ -6,7 +6,7 @@ updated: 2018-01-23
 Relearning **Javascript** part one. 
 How to sort a list of objects dynamically?
 
-*Edit*: In [JS again - 2](/notes/js-again-2-improve-sorting-with-objects), we've improved on the sorting.
+*Edit*: In [JS again - 2](/notes/js-again-2-improved-sorting-with-objects), we've improved on the sorting.
 
 # Some data
 ```javascript
