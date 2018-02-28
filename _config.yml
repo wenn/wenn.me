@@ -1,8 +1,10 @@
 # Site Info
 title:              "Nguyen Nguyen"
-description:        "Blogging is cool?"
-google_verify:      epFgX0s_0RM3CdjwFcsewfXzPov2g8s9ZBOLyaIUH-o # Put your Google Verification here
-google_analytics:   UA-XXXXXXX-X # Put your Google Analytics code
+description:        "I'm Nguyen Nguyen, a software engineer. This is my blog, a place for to document problems and solutions, so that I can recall it at a later time."
+author:             "Nguyen Nguyen"
+keywords:           "coding,programming,software,engineer,Nguyen,wenn"
+# google_verify:      epFgX0s_0RM3CdjwFcsewfXzPov2g8s9ZBOLyaIUH-o # Put your Google Verification here
+# google_analytics:   UA-XXXXXXX-X # Put your Google Analytics code
 
 # Author Info
 author_name:        Nguyen Nguyen
