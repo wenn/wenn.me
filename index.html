@@ -3,7 +3,14 @@ layout: default
 ---
 
 <section>
-    This is a blog, nothing special, just a place to write things down and recall things at a later time. There are probably better content out there.
+
+    <blockquote style="background: none; font-size: 11px">
+    <code>python -c "import this" | tail -3</code><br>
+    <br>
+    If the implementation is hard to explain, it's a bad idea.<br>
+    If the implementation is easy to explain, it may be a good idea.<br>
+    Namespaces are one honking great idea -- let's do more of those!
+    </blockquote>
 
     {% for post in site.posts %}
         {% unless post.next %}
