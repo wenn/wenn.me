@@ -3,7 +3,7 @@ title: Git in byte size 1 - git add
 updated: 2016-02-02
 ---
 
-_Git in byte size_ is a series of small posts about `git`, and we'll be starting off with `git add`
+_Git in byte size_ is a series of small posts about `git`.
 
 Everyone knows either `git add .` or `git add -A`. But it's often that I have to add only a selection of files, add a partial of a file, or have unwanted untrack files in my working space. So knowing what I can do with `git add` helps be become more efficient in managing the files that I want or don't want. Here are a list of comamnds that I use most often.
 
