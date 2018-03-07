@@ -3,6 +3,8 @@ title: JS again - 2, improved sorting with objects.
 updated: 2018-02-04
 ---
 
+{% include series/js.again.md %}
+
 Relearning **Javascript** part two. 
 
 In the last [JS again part one](/notes/js-again-1-dynamic-sorting-with-objects), we sorted 
