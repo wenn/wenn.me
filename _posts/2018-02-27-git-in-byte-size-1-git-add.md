@@ -3,9 +3,9 @@ title: Git in byte size 1 - git add
 updated: 2016-02-02
 ---
 
-_Git in byte size_ is a series of small posts about `git`.
+{% include series/git.in.byte.size.md %}
 
-Everyone knows either `git add .` or `git add -A`. But it's often that I have to add only a selection of files, add a partial of a file, or have unwanted untrack files in my working space. So knowing what I can do with `git add` helps be become more efficient in managing the files that I want or don't want. Here are a list of comamnds that I use most often.
+Everyone knows `git add .` and `git add -A`. But it's often that I have to add only a selection of files, add a partial of a file, or have unwanted untrack files in my working space. So knowing the different options of `git add` helps with efficiency in managing the files. Here are a list of comamnds that I use most often.
 
 - `git add -u` only stage tracked files, does not touch untrack files. 
 
@@ -13,7 +13,7 @@ Everyone knows either `git add .` or `git add -A`. But it's often that I have to
   - `git add stuff/*` add all of _stuff_ to your index.
   - `git add stuff/*.md` add only `.md` files in _stuff_ to your index.
 
-- `git add -p` __p__ for patch, prompts you with a hunk (a section of code) selector with options to slice and dice what needs to be staged in a file. When prompted you can type `?` for the help. 
+- `git add -p` __p__ for patch, prompts you with a hunk (a section of code) selector to slice and dice what needs to be staged in a file. When prompted you can type `?` for the help. 
 
 - `get add -e` __e__ for edit, a quicker way than `patching`, a straight edit on the diff so you can apply what you want to staged and what you don't. You can also make changes to the changes.
 
