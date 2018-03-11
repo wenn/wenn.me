@@ -1,12 +1,12 @@
 ---
 title: Git in byte size 2 - git commit
-updated: 2016-02-02
+updated: 2018-03-06
 ---
 
 {% include series/git.in.byte.size.md %}
 
-`git commit`, fairly straightforward. 
-There's not much going on here except for when you need to commit your staged changes. 
+`git commit`, fairly straightforward.
+There's not much going on here except for when you need to commit your staged changes.
 Most people will probably use one of these variations:
 - `git commit` ( [preferred](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53))
 - `git commit -m 'a quick commit'`
