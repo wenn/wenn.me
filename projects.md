@@ -34,9 +34,6 @@ or
 
 `swing hmmm`
 
-### [Penny][penny]
-Visualize how you spend. ( under construction ).
-
 ### [git hooks with python scripts][py-git-hooks]
 Old project, needs work. Manage and organize git hooks as python scripts in your project.
 
