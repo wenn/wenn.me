@@ -1,16 +1,9 @@
 ---
 layout: default
+title: Posts
 ---
 
 <section>
-
-    <blockquote style="background: none; font-size: 11px">
-    <code>python -c "import this" | tail -3</code><br>
-    <br>
-    If the implementation is hard to explain, it's a bad idea.<br>
-    If the implementation is easy to explain, it may be a good idea.<br>
-    Namespaces are one honking great idea -- let's do more of those!
-    </blockquote>
 
     {% for post in site.posts %}
         {% unless post.next %}
