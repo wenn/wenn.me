@@ -5,14 +5,24 @@ body {
   font-style: normal;
   font-family: consolas, monaco, courier, "courier new", fixed-width;
   color: #333333;
-  padding: 20px;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  background: #34465a;
+}
+
+div.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  background: white;
+
+  padding: 20px;
   @media (min-width: 992px) {
     padding: 35px 50px;
   }
 }
+
 h1,
 h2,
 h3,
